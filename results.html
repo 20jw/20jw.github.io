@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet"/>
+		<link href='results.css' rel='stylesheet' type='text/css'/>
+		<title>20Jejowych-Wartości</title>
+		<link rel="icon" type="x-icon" href="icon.png"/>
+		<link rel="shortcut icon" type="x-icon" href="icon.png"/>
+		<meta charset="utf-8"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+	<script type="application/javascript" src="ideologies.js"></script>
+	<script>
+		$(document).ready(function() {
+			$(window).resize(function () {
+   
+				var height = $('.bar').height();
+				$('.bar').css({
+					'font-size': (0.9*height) + 'px',
+					'line-height': height + 'px'
+				})
+			}).trigger('resize');
+		});
+	</script>
+
+	<body>
+		<h1>20Jejowych-Wartości — Wyniki</h1>
+		<div class="axis-container">
+		<div class="left-column">
+		<h2>Styl pisania: <span class="weight-300" id="pis"></span></h2>
+		<div class="axis">
+			<img id="img-equality" src="value_images/powaga.jpg" height="160pt"/>
+			<div class="bar equality" id="bar-equality"><div class="text-wrapper" id="equality"></div></div>
+			<div class="bar wealth" id="bar-wealth"><div class="text-wrapper" id="wealth"></div></div>
+			<img id="img-wealth" src="value_images/trolling.jpg" height="160pt"/>
+		</div>
+		<h2>Strony z memami: <span class="weight-300" id="memy-label"></span></h2>
+		<div class="axis">
+			<img id="img-might" src="value_images/jeja.jpg" height="160pt"/>
+			<div class="bar might" id="bar-might"><div class="text-wrapper" id="might"></div></div>
+			<div class="bar peace" id="bar-peace"><div class="text-wrapper" id="peace"></div></div>
+			<img id="img-peace" src="value_images/inne.jpg" height="160pt"/>
+		</div>
+		<h2>Zarządzanie stroną: <span class="weight-300" id="zarz"></span></h2>
+		<div class="axis">
+			<img id="img-liberty" src="value_images/admino.jpg" height="160pt"/>
+			<div class="bar liberty" id="bar-liberty"><div class="text-wrapper" id="liberty"></div></div>
+			<div class="bar authority" id="bar-authority"><div class="text-wrapper" id="authority"></div></div>
+			<img id="img-authority" src="value_images/anarchizm.jpg" height="160pt"/>
+		</div>
+		<h2>Tradycje: <span class="weight-300" id="tra"></span></h2>
+		<div class="axis">
+			<img id="img-tradition" src="value_images/tradycja.jpg" height="160pt"/>
+			<div class="bar tradition" id="bar-tradition"><div class="text-wrapper" id="tradition"></div></div>
+			<div class="bar progress" id="bar-progress"><div class="text-wrapper" id="progress"></div></div>
+			<img id="img-progress" src="value_images/postep.jpg" height="160pt"/>
+		</div>
+
+		<h2>Automatyzazja strony: <span class="weight-300" id="os5"></span></h2>
+		<div class="axis">
+			<img id="img-os5lewo" src="value_images/prymitywizm.jpg" height="160pt"/>
+			<div class="bar os5lewo" id="bar-os5lewo"><div class="text-wrapper" id="os5lewo"></div></div>
+			<div class="bar os5prawo" id="bar-os5prawo"><div class="text-wrapper" id="os5prawo"></div></div>
+			<img id="img-os5prawo" src="value_images/automatyzacja.jpg" height="160pt"/>
+		</div>
+		</div>
+		
+		<div class="right-column">
+		<h2>Preferowane memy: <span class="weight-300" id="os6"></span></h2>
+		<div class="axis">
+			<img id="img-os6lewo" src="value_images/shitposty.jpg" height="160pt"/>
+			<div class="bar os6lewo" id="bar-os6lewo"><div class="text-wrapper" id="os6lewo"></div></div>
+			<div class="bar os6prawo" id="bar-os6prawo"><div class="text-wrapper" id="os6prawo"></div></div>
+			<img id="img-os6prawo" src="value_images/normalne.jpg" height="160pt"/>
+		</div>
+
+		<h2>Podejście do tworzenia memów: <span class="weight-300" id="os7"></span></h2>
+		<div class="axis">
+			<img id="img-os7lewo" src="value_images/bylejakizm.jpg" height="160pt"/>
+			<div class="bar os7lewo" id="bar-os7lewo"><div class="text-wrapper" id="os7lewo"></div></div>
+			<div class="bar os7prawo" id="bar-os7prawo"><div class="text-wrapper" id="os7prawo"></div></div>
+			<img id="img-os7prawo" src="value_images/perfekcjonizm.jpg" height="160pt"/>
+		</div>
+
+		<h2>Kłótnie: <span class="weight-300" id="os8"></span></h2>
+		<div class="axis">
+			<img id="img-os8lewo" src="value_images/gownoburzyzm.jpg" height="160pt"/>
+			<div class="bar os8lewo" id="bar-os8lewo"><div class="text-wrapper" id="os8lewo"></div></div>
+			<div class="bar os8prawo" id="bar-os8prawo"><div class="text-wrapper" id="os8prawo"></div></div>
+			<img id="img-os8prawo" src="value_images/pacyfizm.jpg" height="160pt"/>
+		</div>
+
+		<h2>Polityczność: <span class="weight-300" id="os9"></span></h2>
+		<div class="axis">
+			<img id="img-os9lewo" src="value_images/politycznosc.jpg" height="160pt"/>
+			<div class="bar os9lewo" id="bar-os9lewo"><div class="text-wrapper" id="os9lewo"></div></div>
+			<div class="bar os9prawo" id="bar-os9prawo"><div class="text-wrapper" id="os9prawo"></div></div>
+			<img id="img-os9prawo" src="value_images/apolitycznosc.jpg" height="160pt"/>
+		</div>
+
+		<h2>Zwracanie na siebie uwagi: <span class="weight-300" id="os10"></span></h2>
+		<div class="axis">
+			<img id="img-os10lewo" src="value_images/zwracanie.jpg" height="160pt"/>
+			<div class="bar os10lewo" id="bar-os10lewo"><div class="text-wrapper" id="os10lewo"></div></div>
+			<div class="bar os10prawo" id="bar-os10prawo"><div class="text-wrapper" id="os10prawo"></div></div>
+			<img id="img-os10prawo" src="value_images/niezwracanie.jpg" height="160pt"/>
+		</div>
+		</div>
+		</div>
+
+		<h2>Użytkownik z najbliższym wynikiem: <span class="weight-300" id="ideology-label"></span></h2>
+		<p>Aktualnie nie mamy wyników innych użytkowników i nie możemy cię dopasować do żadnego z nich.</p>
+		<hr/>
+		<h2 style="text-align:center">Pobierz poniższy baner i podziel się wynikiem z innymi:</h2>
+		<img src="" id="banner">
+		<button class="button" onclick="location.href='index.html';" style="background-color: #2196f3;">Cofnij</button> <br>
+
+		<script>
+			function getQueryVariable(variable)
+			{
+				   var query = window.location.search.substring(1)
+				   var vars = query.split("&")
+				   for (var i=0;i<vars.length;i++) {
+						   var pair = vars[i].split("=")
+						   if(pair[0] == variable) {return pair[1]}
+				   }
+				   return(NaN);
+			}
+
+			function setBarValue(name, value) {
+				innerel = document.getElementById(name)
+				outerel = document.getElementById("bar-" + name)
+				outerel.style.width = (value + "%")
+				innerel.innerHTML = (value + "%")
+				if (innerel.offsetWidth + 20 > outerel.offsetWidth) {
+					innerel.style.visibility = "hidden"
+				}
+			}
+
+			econArray = ["Pan Maruda","Ultra-Powaga","Powaga","Centrum","Śmieszek","Troll","Ultra-Troll"]
+			diplArray = ["Anty-Jeja","Wyjątkowo nie przepadasz za jeja","Nie przepadasz za jeja","Centrum","Jejo-Patriota","Jejo-Narodowiec","Ultra Jejo-Narodowiec"]
+			govtArray = ["Admino-Faszysta","Autorytarian","Duża Ingerencja","Centrum","Liberał","Anarchista","Rewolucjonista"]
+			sctyArray = ["Anty-Tradycje","Progresywność","Częściowa Progresywność","Centrum","Lekki Konserwatyzm","Jejowy-Konserwatysta","Stare Jeja"]
+			
+			os5Array = ["Return to Monke", "Anarcho-Prymitywista", "Proste Jeja", "Centrum", "Lekko zautomatyzowane Jeja", "Zautomatyzowane Jeja", "Robo-Jeja"]
+			os6Array = ["Spamer", "Shitposter", "Ironiczne memy", "Centrum", "Zwykłe memy", "Poważne memy", "Ultra-Poważne memy"]
+			os7Array = ["Jakiekolwiek memy", "Minimalne wymagania", "Liberalizm", "Centrum", "Przęciętne wymagania", "wysokie Wymagania", "Perfekcjonizm"]
+			os8Array = ["Ciągłe Gównoburze", "Gównoburze", "Kłótnie", "Centrum", "Dyskusje", "Minimalna ilość sporów", "Pacyfizm"]
+			os9Array = ["Polityczność", "Częściowa polityczność", "Lekka polityczność", "Centrum", "Centryzm polityczny", "Apolityczność", "Antypolityczność"]
+			os10Array = ["Ciągłe zwracanie uwagi na siebie", "Zwracanie uwagi", "Minimalne zwracanie uwagi", "Centrum", "Niezwracanie uwagi", "Nieatencyjność", "Antyatencyjość"]
+			
+
+			function setLabel(val,ary) {
+				if (val > 100) { return "" } else
+				if (val > 90) { return ary[0] } else
+				if (val > 75) { return ary[1] } else
+				if (val > 60) { return ary[2] } else
+				if (val >= 40) { return ary[3] } else
+				if (val >= 25) { return ary[4] } else
+				if (val >= 10) { return ary[5] } else
+				if (val >= 0) { return ary[6] } else
+					{return ""}
+			}
+
+			equality  = getQueryVariable("e")
+			peace     = getQueryVariable("d")
+			liberty   = getQueryVariable("g")
+			progress  = getQueryVariable("s")
+			
+			os5lewo = getQueryVariable("os5")
+			os6lewo = getQueryVariable("os6")
+			os7lewo = getQueryVariable("os7")
+			os8lewo = getQueryVariable("os8")
+			os9lewo = getQueryVariable("os9")
+			os10lewo = getQueryVariable("os10")
+			
+			
+			wealth    = (100 - equality).toFixed(1)
+			might     = (100 - peace   ).toFixed(1)
+			authority = (100 - liberty ).toFixed(1)
+			tradition = (100 - progress).toFixed(1)
+			
+			os5prawo  = (100 - os5lewo).toFixed(1)
+			os6prawo  = (100 - os6lewo).toFixed(1)
+			os7prawo  = (100 - os7lewo).toFixed(1)
+			os8prawo  = (100 - os8lewo).toFixed(1)
+			os9prawo  = (100 - os9lewo).toFixed(1)
+			os10prawo  = (100 - os10lewo).toFixed(1)
+			
+
+			setBarValue("equality", equality)
+			setBarValue("wealth", wealth)
+			setBarValue("peace", peace)
+			setBarValue("might", might)
+			setBarValue("liberty", liberty)
+			setBarValue("authority", authority)
+			setBarValue("progress", progress)
+			setBarValue("tradition", tradition)
+			
+			setBarValue("os5lewo", os5lewo)
+			setBarValue("os6lewo", os6lewo)
+			setBarValue("os7lewo", os7lewo)
+			setBarValue("os8lewo", os8lewo)
+			setBarValue("os9lewo", os9lewo)
+			setBarValue("os10lewo", os10lewo)
+			
+			setBarValue("os5prawo", os5prawo)
+			setBarValue("os6prawo", os6prawo)
+			setBarValue("os7prawo", os7prawo)
+			setBarValue("os8prawo", os8prawo)
+			setBarValue("os9prawo", os9prawo)
+			setBarValue("os10prawo", os10prawo)
+			
+			
+			
+
+			document.getElementById("pis").innerHTML = setLabel(equality, econArray)
+			document.getElementById("memy-label").innerHTML = setLabel(peace, diplArray)
+			document.getElementById("zarz").innerHTML = setLabel(liberty, govtArray)
+			document.getElementById("tra").innerHTML = setLabel(progress, sctyArray)
+			
+			
+			
+			document.getElementById("os5").innerHTML = setLabel(os5lewo, os5Array)
+			document.getElementById("os6").innerHTML = setLabel(os6lewo, os6Array)
+			document.getElementById("os7").innerHTML = setLabel(os7lewo, os7Array)
+			document.getElementById("os8").innerHTML = setLabel(os8lewo, os8Array)
+			document.getElementById("os9").innerHTML = setLabel(os9lewo, os9Array)
+			document.getElementById("os10").innerHTML = setLabel(os10lewo, os10Array)
+
+			ideology = ""
+			ideodist = Infinity
+			for (var i = 0; i < ideologies.length; i++) {
+				dist = 0
+				dist += Math.pow(Math.abs(ideologies[i].procenty[0] - equality), 2)
+				dist += Math.pow(Math.abs(ideologies[i].procenty[2] - liberty), 2)
+				dist += Math.pow(Math.abs(ideologies[i].procenty[1] - might), 2)
+				dist += Math.pow(Math.abs(ideologies[i].procenty[3] - tradition), 2)
+				
+				dist += Math.pow(Math.abs(ideologies[i].procenty[4] - os5lewo), 2)
+				dist += Math.pow(Math.abs(ideologies[i].procenty[5] - os6lewo), 2)
+				dist += Math.pow(Math.abs(ideologies[i].procenty[6] - os7lewo), 2)
+				dist += Math.pow(Math.abs(ideologies[i].procenty[7] - os8lewo), 2)
+				dist += Math.pow(Math.abs(ideologies[i].procenty[8] - os9lewo), 2)
+				dist += Math.pow(Math.abs(ideologies[i].procenty[9] - os10lewo), 2)
+				
+				
+				if (dist < ideodist) {
+					ideology = ideologies[i].name
+					ideodist = dist
+				}
+			}
+			document.getElementById("ideology-label").innerHTML = ideology
+		</script>
+		<script src="draw.js" type="text/javascript"></script>
+	</body>
+</html>
