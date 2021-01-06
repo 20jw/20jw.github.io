@@ -1,7 +1,38 @@
 ideologies = [
     {
-        "name": "wkrótce dostępne...",
-		//os1, os2, os3, os4, os5, os6, os7, os8, os9, os10; procenty lewej wartosci lol nie te prawej tamto jest pojebane a tak bedzie prosciej chyba nie cnie prawda powiedz ze tak prosze antos spedzilem nad tym 8wartosci cala noc DDD:
-        "procenty": [65.2, 57.9, 69.6, 60.5, 33.3, 38.9, 53.1, 16.7, 66.7, 25.0]
+        "name": "Komarzyca",
+        "procenty": [54.3, 54.8, 22.2, 74.0, 37.5, 84.1, 34.4, 62.5, 60.0, 37.5]
+    },
+	    {
+        "name": "Koteczek_21",
+        "procenty": [58.7, 60.7, 57.4, 69.8, 59.4, 20.5, 68.8, 41.7, 60.0, 20.8]
+    },
+	    {
+        "name": "olelele",
+        "procenty": [21.8, 67.9, 58.3, 42.7, 34.4, 88.6, 46.9, 75.0, 70.0, 33.3]
+    },
+	    {
+        "name": "przecietny_obywatel_ziemi",
+        "procenty": [33.7, 71.4, 47.2, 52.1, 25.0, 68.2, 75.0, 37.5, 60.0, 41.7]
+    },
+	    {
+        "name": "arcymistrz",
+        "procenty": [64.1, 23.8, 74.1, 53.1, 50.0, 15.9, 65.6, 50.0, 70.0, 0]
+    },
+	    {
+        "name": "GajosRufusOdnoga",
+        "procenty": [38.0, 50.0, 49.1, 39.6, 28.1, 75.0, 78.1, 45.8, 40.0, 33.3]
+    },
+	    {
+        "name": "Landark",
+        "procenty": [60.9, 50.0, 43.5, 67.7, 43.8, 61.4, 62.5, 54.2, 70.0, 45.8]
+    },
+	    {
+        "name": "Oliwier256",
+        "procenty": [63.0, 71.4, 53.7, 58.3, 46.9, 47.7, 62.5, 33.3, 30.0, 41.7]
+    },
+	    {
+        "name": "memtwurca",
+        "procenty": [58.7, 75.0, 55.6, 78.1, 37.5, 22.7, 46.9, 58.3, 35.0, 12.5]
     },
 ];
