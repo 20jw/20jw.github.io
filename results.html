@@ -245,7 +245,7 @@
 				dist += Math.pow(Math.abs(ideologies[i].procenty[9] - os10lewo), 2)
 				
 				
-				if (dist < ideodist) {
+				if (dist < ideodist && dist !== 0) {
 					ideology = ideologies[i].name
 					ideodist = dist
 				}
