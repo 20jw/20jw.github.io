@@ -576,7 +576,7 @@ questions = [
             "os10": 0
         }
     },    {
-        "question": "Słaba rozdzielczość mema wcale pogarsza jego śmieszności.",
+        "question": "Słaba rozdzielczość mema wcale nie pogarsza jego śmieszności.",
         "effect": {
             "econ": 0,
             "dipl": 0,
