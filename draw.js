@@ -1,6 +1,6 @@
-var ver = "1.0"    
+var ver = "1.1"    
 
-var os5V = "Automatyzazja strony";
+var os5V = "Automatyzacja strony";
 var os6V = "Preferowane memy";
 var os7V = "Podejście do tworzenia memów";
 var os8V = "Kłótnie";
